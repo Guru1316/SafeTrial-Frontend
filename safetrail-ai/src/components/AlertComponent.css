@@ -1,0 +1,119 @@
+/* src/components/AlertComponent.css */
+.alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  background: white;
+  border: 1px solid var(--light-color);
+  transition: var(--transition);
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.alert-item:hover {
+  box-shadow: var(--box-shadow);
+}
+
+.alert-item.unread {
+  background: #f0f9ff;
+  border-left: 4px solid var(--info-color);
+}
+
+.alert-high {
+  border-left: 4px solid var(--danger-color);
+}
+
+.alert-medium {
+  border-left: 4px solid var(--warning-color);
+}
+
+.alert-low {
+  border-left: 4px solid var(--success-color);
+}
+
+.alert-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-content {
+  flex: 1;
+  cursor: pointer;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.alert-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark-color);
+  text-transform: uppercase;
+}
+
+.alert-time {
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+.alert-message {
+  font-size: 14px;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+}
+
+.alert-details {
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  font-size: 13px;
+}
+
+.alert-details p {
+  margin-bottom: 5px;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.alert-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.alert-btn.view {
+  background: var(--primary-color);
+  color: white;
+}
+
+.alert-btn.view:hover {
+  background: #1d4ed8;
+}
+
+.alert-btn.dismiss {
+  background: transparent;
+  color: var(--gray-color);
+  font-size: 18px;
+  padding: 0 5px;
+}
+
+.alert-btn.dismiss:hover {
+  color: var(--danger-color);
+}

@@ -1,0 +1,30 @@
+/* src/App.css */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-layout {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  transition: var(--transition);
+  min-height: calc(100vh - 70px);
+}
+
+.main-content.full-width {
+  margin-left: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 15px;
+  }
+}

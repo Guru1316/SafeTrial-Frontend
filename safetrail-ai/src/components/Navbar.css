@@ -1,0 +1,132 @@
+/* src/components/Navbar.css */
+.navbar {
+  background: linear-gradient(135deg, var(--primary-color), #1e40af);
+  color: white;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-icon {
+  font-size: 24px;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.language-select {
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.language-select option {
+  background: var(--dark-color);
+  color: white;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.logout-btn {
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-center {
+    display: none;
+  }
+
+  .user-name {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+/* src/components/MapComponent.css */
+.map-container {
+  height: 500px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+.marker-pulse {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.marker-pulse.safe {
+  background: var(--success-color);
+}
+
+.marker-pulse.warning {
+  background: var(--warning-color);
+}
+
+.marker-pulse.danger {
+  background: var(--danger-color);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+  border-radius: var(--border-radius);
+  padding: 5px;
+}
+
+.leaflet-popup-content {
+  margin: 10px;
+  font-family: inherit;
+}
+
+.leaflet-container {
+  font-family: inherit;
+}

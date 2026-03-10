@@ -1,0 +1,418 @@
+/* src/pages/EmergencyContactsManager.css */
+.contacts-manager {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contacts-header h1 {
+  font-size: 32px;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+}
+
+.contacts-header p {
+  color: #6b7280;
+}
+
+/* Primary Contact Card */
+.primary-contact-card {
+  background: linear-gradient(135deg, var(--primary-color), #1e40af);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  margin-bottom: 30px;
+  color: white;
+  box-shadow: var(--box-shadow);
+}
+
+.primary-contact-card h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+.primary-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.contact-avatar {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  border: 3px solid white;
+}
+
+.contact-details h4 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.contact-details p {
+  margin-bottom: 3px;
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+.contact-details .contact-relation {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.primary-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Contacts Grid */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.contact-card.primary {
+  border-color: var(--primary-color);
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contact-avatar-large {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-info h3 {
+  font-size: 16px;
+  color: var(--dark-color);
+  margin-bottom: 3px;
+}
+
+.contact-relation {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.primary-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.contact-details-list {
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-top: 1px solid var(--light-color);
+  border-bottom: 1px solid var(--light-color);
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.contact-detail:last-child {
+  margin-bottom: 0;
+}
+
+.detail-icon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.contact-detail a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.contact-detail a:hover {
+  color: var(--primary-color);
+}
+
+.contact-notes {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.contact-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.icon-btn.edit:hover {
+  background: var(--light-color);
+  color: var(--primary-color);
+}
+
+.icon-btn.delete:hover {
+  background: #fee2e2;
+  color: var(--danger-color);
+}
+
+/* Form Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.modal-content {
+  background: white;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--light-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  color: var(--dark-color);
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--gray-color);
+}
+
+.contact-form {
+  padding: 20px;
+}
+
+.form-checkbox {
+  margin: 15px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--dark-color);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--light-color);
+}
+
+/* No Contacts State */
+.no-contacts {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.no-contacts-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-contacts h3 {
+  font-size: 20px;
+  color: var(--dark-color);
+  margin-bottom: 10px;
+}
+
+.no-contacts p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* Emergency Instructions */
+.emergency-instructions {
+  background: var(--light-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+.emergency-instructions h3 {
+  font-size: 16px;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+}
+
+.emergency-instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.emergency-instructions li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.emergency-instructions li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .contacts-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .primary-contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .primary-badge {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .contact-card-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}

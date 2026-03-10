@@ -1,0 +1,318 @@
+/* src/pages/TouristDashboard.css */
+.tourist-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-header {
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  color: var(--dark-color);
+  margin-bottom: 5px;
+}
+
+.last-updated {
+  font-size: 14px;
+  color: var(--gray-color);
+}
+
+/* Safety Score Card */
+.safety-score-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  box-shadow: var(--box-shadow);
+}
+
+.score-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.score-inner {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.score-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--dark-color);
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 14px;
+  color: var(--gray-color);
+}
+
+.score-details {
+  flex: 1;
+}
+
+.score-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.score-details p {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+.score-factors {
+  background: var(--light-color);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+.score-factors h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.score-factors ul {
+  list-style: none;
+}
+
+.score-factors li {
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.dashboard-card h3 {
+  font-size: 18px;
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-color);
+}
+
+/* Digital ID Card */
+.digital-id-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.id-icon {
+  font-size: 40px;
+  background: var(--light-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.id-info p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 5px;
+}
+
+/* Trip Card */
+.trip-info p {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+/* Alerts Card */
+.alerts-list {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+.no-alerts {
+  text-align: center;
+  color: var(--gray-color);
+  padding: 30px;
+}
+
+/* Quick Actions */
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: var(--dark-color);
+  transition: var(--transition);
+}
+
+.action-button:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.action-button.emergency {
+  background: #fee2e2;
+  color: var(--danger-color);
+}
+
+.action-button.emergency:hover {
+  background: var(--danger-color);
+  color: white;
+}
+
+.action-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.action-button span:last-child {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Panic Button */
+.panic-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.panic-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--danger-color);
+  color: white;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.panic-button:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.panic-icon {
+  font-size: 32px;
+}
+
+.panic-note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--gray-color);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .safety-score-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panic-button {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+}
